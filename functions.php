@@ -79,51 +79,46 @@ if ( ! function_exists( 'venue_setup' ) ) :
             'name'          => __( 'Blog Sidebar', 'venue' ),
             'id'            => 'blog-sidebar',
             'description'   => __( 'This widgets will display in blog sidebar', 'venue' ),
-            'before_widget' => '<div id="%1$s" class="tp-sidebar-widget mb-45 %2$s">',
+            'before_widget' => '<div id="%1$s" class="col-md-5 %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-sidebar-widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '',
+            'after_title'   => '',
         ) );
+        
+// Footer Widget 1 (About Section)
+register_sidebar( array(
+    'name'          => __( 'Footer Widget 01', 'venue' ),
+    'id'            => 'footer-widget-1',
+    'description'   => __( 'This will display below the about section in footer.', 'venue' ),
+    'before_widget' => '<div class="footer-about-widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+) );
 
-        register_sidebar( array(
-            'name'          => __( 'Footer Widget 01', 'venue' ),
-            'id'            => 'footer-widget-1',
-            'description'   => __( 'This widgets will display in footer widget 01', 'venue' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-1 mb-50 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
-        ) );
+// Footer Widget 2 (Useful Links)
+register_sidebar( array(
+    'name'          => __( 'Footer Widget 02', 'venue' ),
+    'id'            => 'footer-widget-2',
+    'description'   => __( 'This will display in the middle footer section.', 'venue' ),
+    'before_widget' => '<div class="useful-links"><div class="footer-heading">',
+    'after_widget'  => '</div></div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+) );
 
-        register_sidebar( array(
-            'name'          => __( 'Footer Widget 02', 'venue' ),
-            'id'            => 'footer-widget-2',
-            'description'   => __( 'This widgets will display in footer widget 02', 'venue' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-2 mb-50 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
-        ) );
+// Footer Widget 3 (Contact Info)
+register_sidebar( array(
+    'name'          => __( 'Footer Widget 03', 'venue' ),
+    'id'            => 'footer-widget-3',
+    'description'   => __( 'This will display in the contact info section.', 'venue' ),
+    'before_widget' => '<div class="contact-info"><div class="footer-heading">',
+    'after_widget'  => '</div></div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>',
+) );
+        
 
-        register_sidebar( array(
-            'name'          => __( 'Footer Widget 03', 'venue' ),
-            'id'            => 'footer-widget-3',
-            'description'   => __( 'This widgets will display in footer widget 03', 'venue' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-3 mb-50 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
-        ) );
-
-        register_sidebar( array(
-            'name'          => __( 'Footer Widget 04', 'venue' ),
-            'id'            => 'footer-widget-4',
-            'description'   => __( 'This widgets will display in footer widget 04', 'venue' ),
-            'before_widget' => '<div id="%1$s" class="tp-footer-widget tp-footer-col-4 mb-50 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="tp-footer-widget-title">',
-            'after_title'   => '</h3>',
-        ) );
     }
     add_action( 'widgets_init', 'venue_widgets_init' );
 

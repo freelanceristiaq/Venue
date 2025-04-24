@@ -24,11 +24,15 @@ function venue_header_logo(){
 }
 
 
-function venue_header_social(){ 
+
+function venue_footer_social(){ 
     $social_fb = get_theme_mod('social_fb',__('#','venue'));
     $social_x = get_theme_mod('social_x',__('#','venue'));
     $social_in = get_theme_mod('social_in',__('#','venue'));
-    $social_pin = get_theme_mod('social_pin',__('#','venue'));
+    $social_ln = get_theme_mod('social_ln',__('#','venue'));
+    $social_rs = get_theme_mod('social_rs',__('#','venue'));
+    $social_dr = get_theme_mod('social_dr',__('#','venue'));
+
     
     ?>
 
@@ -37,15 +41,23 @@ function venue_header_social(){
     <?php endif; ?>
 
     <?php if($social_x): ?>
-    <a href="<?php echo esc_url($social_x); ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a>
+    <a href="<?php echo esc_url($social_x); ?>"><i class="fa fa-twitter"></i></a>
     <?php endif; ?>
 
     <?php if($social_in): ?>
     <a href="<?php echo esc_url($social_in); ?>"><i class="fa-brands fa-instagram"></i></a>
     <?php endif; ?>
 
-    <?php if($social_pin): ?>
-    <a href="<?php echo esc_url($social_pin); ?>"><i class="fa-brands fa-pinterest"></i></a>
+    <?php if($social_ln): ?>
+    <a href="<?php echo esc_url($social_ln); ?>"><i class="fa fa-linkedin"></i></a>
+    <?php endif; ?>
+
+    <?php if($social_rs): ?>
+    <a href="<?php echo esc_url($social_rs); ?>"><i class="fa fa-rss"></a>
+    <?php endif; ?>
+
+    <?php if($social_dr): ?>
+    <a href="<?php echo esc_url($social_dr); ?>"><i class="fa fa-dribbble"></i></a>
     <?php endif; ?>
 <?php
 }
